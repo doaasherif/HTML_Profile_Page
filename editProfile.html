@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+
+    </head>
+    <body>
+
+        <!--account form-->
+        <form id="form1" name="accountForm" method="POST">
+            <fieldset>
+                <legend>Account</legend>
+
+                <!--profile picture-->
+                <label for="myPic">
+                    <b>Profile picture</b>
+                </label>
+                <br>
+                <input type="file" id="myPic">
+
+                <br>
+                <br>
+
+                <!--username-->
+                <label for="myUsername">
+                    <b>Username</b>
+                </label>
+                <br>
+                <input type="text" name="Username" id="myUsername" minlength="4" maxlength="8" placeholder="from 4 to 8 char" required>
+
+                <br>
+                <br>
+
+                <!--password-->
+                <label for="myPassword">
+                    <b>Password</b>
+                </label>
+                <br>
+                <input type="password" name="Password" id="myPassword" minlength="6" placeholder="min 6 char" required>
+
+            </fieldset>
+        </form>
+
+
+        <br>
+
+
+        <!--contacts form-->
+        <form id="form2" name="contactForm" method="GET">
+            <fieldset>
+                <legend>Contacts</legend>
+
+                <!--facebook url-->
+                <label for="FBUrl" style="margin-right: 10px;">
+                    <b>Facebook</b>
+                </label>
+                <input type="url" placeholder="add fb url" id="FBUrl" name="URL">
+
+                <br>
+                <br>
+
+                <!--email-->
+                <label for="myEmail" style="margin-right: 35px;">
+                    <b>Email</b>
+                </label>
+                <input type="email" placeholder="example@example.com" name="Email" required>
+
+                <br>
+                <br>
+
+                <!--mobile-->
+                <label for="myMobile" style="margin-right: 28px;">
+                    <b>Mobile</b>
+                </label>
+                <input type="tel" placeholder="01 ..." name="Mobile" required>
+
+            </fieldset>
+        </form>
+
+
+        <br>
+        <br>
+
+
+        <!--submit button-->
+        <input type="submit" value="Submit" onclick="submitForms()">
+
+        <!--reset button-->
+        <input type="reset" value="Reset" onclick="resetForms()">
+
+        <br>
+        <br>
+
+        <!--back button-->
+        <button name="backButton" onclick="location.href= 'index.html'">Back to profile</button>
+
+        <script>
+
+            submitForms = function() {
+                document.getElementById("form1").submit();
+                document.getElementById("form2").submit();
+                return true;
+            } 
+
+            resetForms = function() {
+                document.getElementById("form1").reset();
+                document.getElementById("form2").reset();
+                return true;
+            } 
+
+        </script>
+
+    </body>
+</html>
